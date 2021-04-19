@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Feb 19 11:13:38 2021
+This module is a worked example which answers the challenge at the end of the
+ipython notebook "difference_between_two_cvs" here:
+https://github.com/ixdat/tutorials/blob/main/simple_ec_analysis/difference_between_two_cvs.ipynb
 
-@author: scott
+I suggest to go through that notebook and give the exercise a try yourself
+before taking a look at the suggested solutions here.
 """
 import numpy as np
 from matplotlib import pyplot as plt
@@ -10,7 +13,10 @@ from ixdat.techniques import CyclicVoltammagram as CV
 
 plt.close("all")
 
-meas = CV.read("./oxide_reduction.csv", reader="ixdat")
+meas = CV.read_url(
+    "https://raw.githubusercontent.com/ixdat/tutorials/main/loading_appending_and_saving/oxide_reduction.csv",
+    reader="ixdat"
+)
 
 meas.plot_measurement()
 
@@ -27,11 +33,11 @@ if True:  # Method 1
     ax.plot(v_red, I_red, "g")
     ax.plot(v_base, I_base, "k")
 
-    Q_red = np.trapz(I_red, t_red) * 1e-3
-    Q_base = np.trapz(I_base, t_base) * 1e-3
+    Q_reduction_cycle = np.trapz(I_red, t_red) * 1e-3
+    Q_base_cycle = np.trapz(I_base, t_base) * 1e-3
 
-    dQ_red = Q_red - Q_base
-    print(f"----------\nreduced with {dQ_red*1e6} uC passed.\n---------")
+    Q_red = Q_reduction_cycle - Q_base_cycle
+    print(f"----------\nMethod 1: reduced with {Q_red*1e6} uC passed.\n---------")
 
 
 #  this is used for both methods 2 and 3
@@ -59,11 +65,11 @@ if True:  # Method 2
     )
     Q_red = Q_reduction_cycle - Q_base_cycle
 
-    print(f"----------\nreduced with {Q_red*1e6} uC passed.\n---------")
+    print(f"----------\nMethod 2: reduced with {Q_red*1e6} uC passed.\n---------")
 
 if True:  # Method 3
     diff = meas[1].diff_with(meas[2])
     diff.plot()
     Q_red = diff.integrate("raw_current", tspan=[360, 380], ax="new") * 1e-3
 
-    print(f"----------\nreduced with {Q_red*1e6} uC passed.\n---------")
+    print(f"----------\nMethod 3:  reduced with {Q_red*1e6} uC passed.\n---------")
