@@ -15,7 +15,7 @@ plt.close("all")
 
 meas = CV.read_url(
     "https://raw.githubusercontent.com/ixdat/tutorials/main/loading_appending_and_saving/oxide_reduction.csv",
-    reader="ixdat"
+    reader="ixdat",
 )
 
 meas.plot_measurement()
