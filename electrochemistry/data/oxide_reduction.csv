@@ -1,3 +1,4 @@
+ixdat version = 0.2.0dev
 name = extended_platinum_ec
 technique = EC
 tstamp = 1580466722.0
@@ -5,7 +6,7 @@ backend_name = BackendBase(none, address=none)
 id = 11
 timecol 'time/s' for: '$U_{RHE}$ / [V]' and 'raw_current' and 'selector'
 aliases = {"t": ["time/s"], "raw_potential": ["$U_{RHE}$ / [V]"], "raw_current": ["raw_current"], "selector": ["selector"]}
-N_header_lines = 10
+N_header_lines = 11
 
 time/s,	$U_{RHE}$ / [V],	raw_current,	selector
 16000.46835231781,	1.862848,	0.050015192,	0
