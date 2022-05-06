@@ -74,20 +74,36 @@ A worked example based on the methods in this tutorial
 Spectroelectrochemistry
 -----------------------
 
-
-
 Location: `spectroelectrochemistry/spectroelectrochemistry_demo.ipynb <https://github.com/ixdat/tutorials/blob/main/spectroelectrochemistry/spectroelectrochemistry_demo.ipynb>`_
 
 The sample data is not yet publically available.
 
 EC-MS
-----------------------
+-----
 See these two examples, respectively, for making and using an ixdat EC-MS calibration:
 
 - https://github.com/ScottSoren/pyCOox_public/blob/main/paper_I_fig_S1/paper_I_fig_S1.py
 
 - https://github.com/ScottSoren/pyCOox_public/blob/main/paper_I_fig_2/paper_I_fig_2.py
 
+
+Demos
+=====
+
+22E06_ICL
+---------
+
+Four short scripts use to demonstrate ixdat on May 6, 2022 at Imperial College London.
+
+The data is available here:
+https://www.dropbox.com/sh/0xy80ytu9oyykkr/AACcXTRozwDbESFUzeV7bOx5a?dl=0
+
+The contents should be downloaded into a folder **tutorials/data** for the
+relative paths used in the scripts to be accurate.
+
+Demos 02 and 03 work with ixdat version 0.2.2. Demos 01 and 04 require aspects of version 0.2.3
+(``CyclicVoltammogram.plot_cycles()`` and ``XRDMLReader``, respectively) which are available
+pre-release as ixdat 0.2.3dev0: https://pypi.org/project/ixdat/0.2.3.dev0/
 
 For developers
 ==============
