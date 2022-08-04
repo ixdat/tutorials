@@ -2,8 +2,7 @@ from ixdat import Measurement
 
 
 ec = Measurement.read(
-    "../../data/01/iridium_butterfly_short_CVA.mpt",
-    reader="biologic"
+    "../../data/01/iridium_butterfly_short_CVA.mpt", reader="biologic"
 )
 
 ec.calibrate(RE_vs_RHE=0.720, A_el=0.196)
