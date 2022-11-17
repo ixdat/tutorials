@@ -7,7 +7,7 @@ to_plot = {
     "Ru": ("RuO$_2$", "Rude4_omega0p5.xrdml", "black"),
     "RuTi_1": ("Ru$_{0.9}$Ti$_{0.1}$O$_2$", "RutiZelensky_omega0p5.xrdml", "blue"),
     "RuTi_2": ("Ru$_{0.75}$Ti$_{0.25}$O$_2$", "RutiMacron_omega0p5.xrdml", "green"),
-    "Ti": ("TiO$_2$", "Poseidon_omega0p5.xrdml", "red")
+    "Ti": ("TiO$_2$", "Poseidon_omega0p5.xrdml", "red"),
 }
 
 spectra = {}
