@@ -1,13 +1,7 @@
 from ixdat import Measurement
 
 ms = Measurement.read(
-    "../../data/03/2022-04-28 19_18_01 Ruti.tsv",
-    reader="zilien",
-    technique="MS"
-) + Measurement.read(
-    "../../data/03/2022-04-28 23_25_58 Ruti.tsv",
-    reader="zilien",
-    technique="MS"
+    "../../data/03/2022-04-28 23_25_58 Ruti.tsv", reader="zilien", technique="MS"
 )
 
 ec_1 = Measurement.read_set("../../data/03/01",  reader="biologic", suffix=".mpt")
