@@ -23,9 +23,11 @@ ec = Measurement.read_set(data_dir / "03", suffix=".mpt")
 from ixdat.readers.biologic import fix_WE_potential
 
 fix_WE_potential(ec)
+
 # ec.plot()
 ecms = ec + ms
-ecms.plot(J_name="selector")
+ecms.plot(J_name="selector", tspan=[900, 1600])
+
 cal_H2_M2_EC = ecms.ecms_calibration_curve(
     mol="H2",
     mass="M2",
@@ -37,7 +39,7 @@ cal_H2_M2_EC = ecms.ecms_calibration_curve(
 cal_O2_M32_EC = ecms.ecms_calibration_curve(
     mol="O2",
     mass="M32",
-    n_el=4,
+    n_el=4,  # 2 H2O --> O2 + 4 (H+ + e-)
     tspan_bg=[50, 100],
     selector_list=[10, 12, 14],
     t_steady_pulse=30
@@ -61,6 +63,7 @@ cal_CO = ecms.gas_flux_calibration(
     mass="M28",
     tspan=[2800, 2850]
 )
+
 cal_air = ms.multicomp_gas_flux_calibration(
     mol_list=["N2", "O2", "Ar"],
     mass_list=["M28", "M32", "M40"],
@@ -74,5 +77,13 @@ from ixdat.si_quant_patch import append_sensitivity_factors
 calibration = append_sensitivity_factors(
     cal_H2_M2_EC, cal_O2_M32_EC, cal_CO2_M44_EC, cal_He, cal_CO, cal_air
 )
-calibration.plot_as_spectrum()
-calibration.plot_F_vs_f()
+ax = calibration.plot_as_spectrum()
+ax.get_figure().savefig("calibration_as_spectrum.png")
+ax = calibration.plot_F_vs_f()
+ax.get_figure().savefig("calibration_trend.png")
+
+
+ecms.set_quantifier(
+    calibration=calibration, mol_list=["CO2"], mass_list=["M44"]
+)
+ecms.export(mol_list=["CO2"], mass_list=["M44"])

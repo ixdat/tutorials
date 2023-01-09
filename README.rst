@@ -107,5 +107,9 @@ pre-release as ixdat 0.2.3dev0: https://pypi.org/project/ixdat/0.2.3.dev0/
 
 For developers
 ==============
-Add a pre-commit hook that clears all ipython notebook output, as described here:
+Clear output of jupyter notebooks before committing! Add a pre-commit hook that clears all ipython notebook output, as described here:
 https://medium.com/somosfit/version-control-on-jupyter-notebooks-6b67a0cf12a3
+
+A pre-commit hook is prepared for you. Just copy it to the git folder::
+
+  cp pre-commit .git/hooks/pre-commit
