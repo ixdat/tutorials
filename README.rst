@@ -80,7 +80,20 @@ The sample data is not yet publically available.
 
 EC-MS
 -----
-See these two examples, respectively, for making and using an ixdat EC-MS calibration:
+
+This tutorial is to show the most advanced tools to date for ixdat analysis of EC-MS data, you can find it here (zip file because the data files are too big otherwise):
+https://github.com/AnnaWiniwarter/ixdat_tutorials/blob/ecms_tutorial/ecms%20tutorial.zip
+
+It is based on the data analysis done for Spectro Inlets Application Note #2 - Quantification
+
+There are three parts:
+
+-  Importing, plotting and exporting data
+-  Analyzing EC-MS calibrations
+-  Using EC-MS calibrations
+
+
+Other examples for making and using an ixdat EC-MS calibration:
 
 - https://github.com/ScottSoren/pyCOox_public/blob/main/paper_I_fig_S1/paper_I_fig_S1.py
 
