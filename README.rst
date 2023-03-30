@@ -82,7 +82,7 @@ EC-MS
 -----
 
 This tutorial is to show the most advanced tools to date for ixdat analysis of EC-MS data, you can find it here (zip file because the data files are too big otherwise):
-https://github.com/AnnaWiniwarter/ixdat_tutorials/blob/ecms_tutorial/ecms%20tutorial.zip
+https://github.com/ixdat/tutorials/blob/ecms_tutorial/ecms%20tutorial.zip
 
 It is based on the data analysis done for Spectro Inlets Application Note #2 - Quantification
 
