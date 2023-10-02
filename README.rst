@@ -112,4 +112,4 @@ https://medium.com/somosfit/version-control-on-jupyter-notebooks-6b67a0cf12a3
 
 A pre-commit hook is prepared for you. Just copy it to the git folder::
 
-  cp pre-commit .git/hooks/pre-commit
+  cp pre_commit_hook .git/hooks/pre-commit
