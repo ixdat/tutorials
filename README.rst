@@ -80,12 +80,14 @@ The sample data is not yet publically available.
 
 EC-MS
 -----
+The EC-MS tutorials show how to use ixdat to analyse electrochemical and gas calibration data and how to apply a calibration to EC-MS data, as well as some ways of how to use standard matplotlib functions to modify EC-MS plots generated using ixdat.
+There two similar tutorials available: The first one relies solely on the functions built into ixdat, while the second one introduces the same operations using the advanced functionality of the spectro_inlets_quantification package (https://spectroinlets-spectro-inlets-quantification.readthedocs-hosted.com/en/v1.1/).
 
-Location: `ec_ms_quantification/EC-MS_ixdat_tutorial.ipynb <https://github.com/ixdat/tutorials/blob/main//ec_ms_quantification/EC-MS_ixdat_tutorial.ipynb>`_
+(i) Location: `ec_ms_quantification/EC-MS_ixdat_tutorial.ipynb <https://github.com/ixdat/tutorials/blob/main//ec_ms_quantification/EC-MS_ixdat_tutorial.ipynb>`_
 
-This tutorial shows how to use ixdat to analyse electrochemical and gas calibration data and how to apply a calibration to EC-MS data, as well as some ways of how to use standard matplotlib functions to modify EC-MS plots generated using ixdat.
+(Ii) Location: `ec_ms_quantification/EC-MS_calibration_ixdat_si-quant_tutorial_v2.ipynb <https://github.com/ixdat/tutorials/blob/main//ec_ms_quantification/EC-MS_calibration_ixdat_si-quant_tutorial_v2.ipynb>`_
 
-In order to run this tutorial, download the data from https://zenodo.org/record/8400063 (DOI:10.5281/zenodo.8400063) and place it in the same folder as the ipython notebook.
+In order to run either of these tutorials, download the data from Zenodo at https://doi.org/10.5281/zenodo.8400221 and place it in the same folder as the ipython notebook.
 
 
 If interested, check out these two examples, respectively, for making and using an ixdat EC-MS calibration:
