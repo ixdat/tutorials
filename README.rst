@@ -80,7 +80,15 @@ The sample data is not yet publically available.
 
 EC-MS
 -----
-See these two examples, respectively, for making and using an ixdat EC-MS calibration:
+
+Location: `ec_ms_quantification/EC-MS_ixdat_tutorial.ipynb <https://github.com/ixdat/tutorials/blob/main//ec_ms_quantification/EC-MS_ixdat_tutorial.ipynb>`_
+
+This tutorial shows how to use ixdat to analyse electrochemical and gas calibration data and how to apply a calibration to EC-MS data, as well as some ways of how to use standard matplotlib functions to modify EC-MS plots generated using ixdat.
+
+In order to run this tutorial, download the data from https://zenodo.org/record/8400063 (DOI:10.5281/zenodo.8400063) and place it in the same folder as the ipython notebook.
+
+
+If interested, check out these two examples, respectively, for making and using an ixdat EC-MS calibration:
 
 - https://github.com/ScottSoren/pyCOox_public/blob/main/paper_I_fig_S1/paper_I_fig_S1.py
 
