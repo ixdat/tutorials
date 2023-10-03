@@ -9,16 +9,18 @@ before taking a look at the suggested solutions here.
 """
 import numpy as np
 from matplotlib import pyplot as plt
-from ixdat.techniques import CyclicVoltammagram as CV
+from ixdat.techniques import CyclicVoltammogram as CV
 
 plt.close("all")
 
 meas = CV.read_url(
-    "https://raw.githubusercontent.com/ixdat/tutorials/main/loading_appending_and_saving/oxide_reduction.csv",
+    "https://raw.githubusercontent.com/ixdat/tutorials/main/electrochemistry/data/oxide_reduction.csv",
     reader="ixdat",
 )
 
 meas.plot_measurement()
+meas.tstamp = meas.tstamp + meas.t[0]
+
 
 if True:  # Method 1
     tspan_red = [362, 377]
@@ -44,7 +46,6 @@ if True:  # Method 1
 meas = meas.cut([340, 700])
 meas.redefine_cycle(start_potential=1.05, redox=False)
 meas.plot_measurement(J_str="cycle")
-
 
 if True:  # Method 2
     Q_reduction_cycle = (
