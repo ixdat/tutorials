@@ -19,7 +19,7 @@ sec_meas.set_reference_spectrum(V_ref=0.6)
 
 ax = sec_meas.plot_waterfall()
 
-r =  0.85
+r = 0.85
 fig = ax.get_figure()
 fig.set_figwidth(6 * r)
 fig.set_figheight(4.5 * r)

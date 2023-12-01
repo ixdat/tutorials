@@ -18,6 +18,6 @@ O2_M32, ax_cal = ecms.ecms_calibration_curve(
     tspan_list=[(1300, 1350), (1900, 1950), (2500, 2550)],
     tspan_bg=(950, 1000),
     return_ax=True,
-    axes_measurement=axes
+    axes_measurement=axes,
 )
 ecms.calibrate(ms_cal_results=[O2_M32], RE_vs_RHE=0, A_el=0.196)

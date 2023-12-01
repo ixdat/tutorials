@@ -1,9 +1,7 @@
 from ixdat import Measurement
 
 
-ec = Measurement.read(
-    "../../data/01/iridium_butterfly_short_CVA.mpt", reader="biologic"
-)
+ec = Measurement.read("../../data/01/iridium_butterfly_short_CVA.mpt", reader="biologic")
 
 ec.plot()
 
