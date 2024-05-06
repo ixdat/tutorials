@@ -12,7 +12,7 @@ Links to specific examples of ixdat usage showing how to make published figures
 and derive published results can be found in article repositories. For a complete
 list of tutorials and article repositories, see the ixdat documentation:
 
-https://ixdat.readthedocs.io/en/latest/tutorials.html
+https://ixdat.readthedocs.io/en/latest/tutorials/index.html
 
 Setup
 =====
